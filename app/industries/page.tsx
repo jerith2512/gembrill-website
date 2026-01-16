@@ -1,15 +1,15 @@
 import type React from "react"
 import { Container, SectionTitle, Card, ButtonLink } from "@/components/ui-components"
 import { industries } from "@/lib/site-data"
-import { ArrowRight, Heart, DollarSign, ShoppingCart, Building2, Briefcase, Cpu } from "lucide-react"
+import { ArrowRight, DollarSign, Cpu, Clapperboard, FlaskConical, Zap, GraduationCap } from "lucide-react"
 
 const iconMap: Record<string, React.ReactNode> = {
-  Healthcare: <Heart className="h-6 w-6" />,
+  "Independent Software Vendors (ISVs)": <Cpu className="h-6 w-6" />,
+  "Media and New Media": <Clapperboard className="h-6 w-6" />,
+  "Pharma & Biotech": <FlaskConical className="h-6 w-6" />,
   "Financial Services": <DollarSign className="h-6 w-6" />,
-  "E-commerce": <ShoppingCart className="h-6 w-6" />,
-  "Enterprise Software": <Building2 className="h-6 w-6" />,
-  "Professional Services": <Briefcase className="h-6 w-6" />,
-  Technology: <Cpu className="h-6 w-6" />,
+  "Energy & Green Energy": <Zap className="h-6 w-6" />,
+  "Education / eLearning": <GraduationCap className="h-6 w-6" />,
 }
 
 export default function IndustriesPage() {
@@ -34,7 +34,7 @@ export default function IndustriesPage() {
                   <p className="mt-2 text-muted-foreground">{industry.description}</p>
                   <div className="mt-4">
                     <ButtonLink
-                      href="/contact"
+                      href={`/industries/${industry.slug}`}
                       variant="secondary"
                       className="group-hover:bg-primary group-hover:text-primary-foreground"
                     >

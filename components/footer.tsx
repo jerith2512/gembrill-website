@@ -8,8 +8,8 @@ export default function Footer() {
   return (
     <footer className="border-t border-border/40 bg-background pt-24 pb-12">
       <Container>
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-6">
+          <div className="lg:col-span-2">
             <Link href="/" className="inline-block">
               <Image
                 src="/logo.png"
@@ -53,15 +53,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-sm font-semibold tracking-wide text-foreground uppercase">Contact</h3>
             <ul className="mt-6 space-y-4">
               <li className="text-base text-muted-foreground/80">
-                Gembrill Technologies India Private Limited.<br />
-                01, First Floor, OMS Court,<br />
-                Nathamuni Street, GN Chetty Road,<br />
-                T.Nagar, Chennai - 600 017,<br />
-                Tamil Nadu, India
+                <span className="mb-2 block font-medium text-foreground">Gembrill Technologies India Private Limited.</span>
+                01, First Floor, OMS Court, Nathamuni Street, GN Chetty Road, T.Nagar, Chennai - 600 017, Tamil Nadu, India
               </li>
               <li className="text-base text-muted-foreground/80">
                 +91 96000 10212<br />

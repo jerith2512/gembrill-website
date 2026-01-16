@@ -19,7 +19,7 @@ export default function ServicesPage() {
       <section className="py-20">
         <Container>
           <SectionTitle
-            eyebrow="Solutions"
+            eyebrow="Services"
             title="Services that deliver outcomes"
             subtitle="From product engineering to QA automation, we help you build software that works."
           />
@@ -46,8 +46,8 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                   <div className="mt-8">
-                    <ButtonLink href="/contact" variant="primary">
-                      Discuss Your Project
+                    <ButtonLink href={`/services/${service.slug}`} variant="primary">
+                      Learn More
                       <ArrowRight className="h-4 w-4" />
                     </ButtonLink>
                   </div>

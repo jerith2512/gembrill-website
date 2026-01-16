@@ -7,9 +7,16 @@ export function Hero() {
   return (
     <section
       className="relative overflow-hidden py-32 sm:py-48"
-      style={{ background: "linear-gradient(to right, #ffffff 0%, #FF6B00 60%)" }}
+      style={{ background: "#FF7518" }}
     >
-      <Container className="flex flex-col items-center text-center">
+      <div
+        className="absolute inset-0 z-0 opacity-20"
+        style={{
+          backgroundImage: "radial-gradient(#ffffff 1.5px, transparent 1.5px)",
+          backgroundSize: "12px 12px",
+        }}
+      />
+      <Container className="relative z-10 flex flex-col items-center text-center">
         <span className="mb-6 inline-block rounded-full border border-black/10 bg-black/5 px-4 py-1.5 text-sm font-medium tracking-wide text-black/80 backdrop-blur-md">
           The Future of Engineering
         </span>

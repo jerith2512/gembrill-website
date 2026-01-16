@@ -14,7 +14,7 @@ export function ButtonLink({
 }: {
   href: string
   children: React.ReactNode
-  variant?: "primary" | "secondary" | "outline"
+  variant?: "primary" | "secondary" | "outline" | "ghost"
   className?: string
 }) {
   const base =
@@ -23,6 +23,7 @@ export function ButtonLink({
     primary: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm",
     secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
     outline: "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground",
+    ghost: "text-muted-foreground hover:text-foreground hover:bg-muted/50",
   }
   return (
     <Link href={href} className={cn(base, variants[variant], className)}>

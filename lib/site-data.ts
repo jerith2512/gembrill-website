@@ -6,6 +6,7 @@ export type Service = {
   outcome: string
   bullets: string[]
   image: string
+  detailedDescription?: string
 }
 
 export type CaseStudy = {
@@ -17,11 +18,9 @@ export type CaseStudy = {
 }
 
 export const nav: NavItem[] = [
-  { label: "Solutions", href: "/services" },
+  { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
-  { label: "Work", href: "/work" },
   { label: "Company", href: "/company" },
-  { label: "Resources", href: "/resources" },
   { label: "Careers", href: "/careers" },
 ]
 
@@ -30,11 +29,13 @@ export const services: Service[] = [
     slug: "product-engineering",
     title: "Product Engineering",
     outcome: "Realize predictable project success and measurable ROI.",
+    detailedDescription: "Our product engineering team understands the complexities involved in building world-class software. We combine deep expertise in legacy and emerging technologies with a flexible approach that adheres to your specific processes. Most importantly, we maintain a strong respect for your intellectual property rights throughout the engagement.",
     bullets: [
       "Complex product engineering",
       "Legacy and emerging technologies",
       "Adherence to customer processes",
       "Respect for IP rights",
+      "Predictable project success",
     ],
     image: "/images/product-engineering.png",
   },
@@ -42,10 +43,12 @@ export const services: Service[] = [
     slug: "software-development",
     title: "Software Development",
     outcome: "High quality and cost-effective IT services.",
+    detailedDescription: "We provide comprehensive software development services across the entire value chain. From building robust enterprise applications that streamline your operations to developing custom solutions that give you a competitive edge, our team delivers high-quality code that scales.",
     bullets: [
-      "Enterprise Application",
-      "Custom Applications",
+      "Enterprise Application Development",
+      "Custom Application Development",
       "Application Modernization",
+      "Maintenance and Support",
     ],
     image: "/images/software-development.png",
   },
@@ -53,9 +56,15 @@ export const services: Service[] = [
     slug: "portal-development",
     title: "Portal Development",
     outcome: "Robust portals that streamline information and collaboration.",
+    detailedDescription: "We specialize in integrating various technologies and platforms to meet your specific needs. Our portals are designed to handle a large number of requests and transactions while remaining accessible across all devices and platforms. We ensure seamless content management and team collaboration.",
     bullets: [
-      "SharePoint Development",
-      "Drupal Development",
+      "B2B, B2C and B2E Portals",
+      "Corporate Intranets",
+      "Portal Web Content Management",
+      "Social Media Integration",
+      "E-Commerce Solutions",
+      "Business Intelligence",
+      "SharePoint & Drupal Development",
     ],
     image: "/images/portal-development.png",
   },
@@ -63,10 +72,13 @@ export const services: Service[] = [
     slug: "software-testing",
     title: "Software Testing",
     outcome: "Ensure quality with comprehensive testing strategies.",
+    detailedDescription: "Quality is at the core of everything we do. Our comprehensive testing strategies cover the entire lifecycle, ensuring your software is bug-free, performant, and secure. We employ both manual and automated testing methodologies to catch issues early and reduce time-to-market.",
     bullets: [
       "Functional Testing",
       "Automation Testing",
       "Performance Testing",
+      "Security Testing",
+      "Usability Testing",
     ],
     image: "/images/software-testing.png",
   },
@@ -74,11 +86,14 @@ export const services: Service[] = [
     slug: "bpo-services",
     title: "BPO Services",
     outcome: "Leverage best processes to reduce operational costs.",
+    detailedDescription: "Our BPO services allow you to leverage best-in-class processes and technology to reduce operational costs and improve efficiency. We handle the day-to-day tasks so you can focus on your core business strategic initiatives.",
     bullets: [
       "Appointment Setting & Telemarketing",
-      "Market Research and Survey",
+      "Market Research and Surveys",
       "Lead Generation",
       "Collections & Follow-up",
+      "Voice Broadcast",
+      "Telephonic Auditing",
     ],
     image: "/images/bpo-services.png",
   },
@@ -86,11 +101,13 @@ export const services: Service[] = [
     slug: "outsourcing",
     title: "Out Sourcing",
     outcome: "Strategic partnerships that deliver value beyond checking boxes.",
+    detailedDescription: "We believe in strategic partnerships that deliver value beyond just a transactional outsourcing relationship. By leveraging our global talent pool and proven methodologies, we help you improve time-to-market and significantly reduce development and R&D costs.",
     bullets: [
       "Improve time-to-market",
       "Reduce development costs",
       "Reduce R&D costs",
       "Flexible engagement models",
+      "Access to global talent",
     ],
     image: "/images/outsourcing.png",
   },
@@ -144,25 +161,115 @@ export const caseStudies: CaseStudy[] = [
 export const testimonials = [
   {
     quote:
-      "The delivery process was structured, and the quality metrics improved quickly. We gained confidence in releases.",
-    name: "Sarah Chen",
-    company: "CTO, FinTech Solutions",
+      "We are looking at dramatic improvements in throughput in 3 months time and we have already started seeing the results of engaging with Gembrill. Moreover, reliability and functionality of our site will also increase dramatically, for Gembrill offers unbiased quality assurance by virtue of it being independent of the development organization.",
+    name: "CTO",
+    company: "Online News Media",
   },
   {
     quote:
-      "Clear communication, predictable milestones, and practical recommendations that helped us modernize safely.",
-    name: "Michael Ross",
-    company: "VP of Engineering, HealthFlow",
+      "Each of the performance goal set for Gembrill team has been achieved by meticulously implementing the vision. Gembrill team works seamlessly, as a true extension of our own technical support team.",
+    name: "Director Manufacturing",
+    company: "Telecom Product",
+  },
+  {
+    quote:
+      "We selected Gembrill as an offshore development partner after a thorough review of multiple vendors. Gembrill's India collective experience as an organization became clear during our meeting. Internally, we could not match their skills for what we are charged. Now, when we look back after 3 years, I think we have made the best decision of going with Gembrill and we are very happy about it.",
+    name: "CEO",
+    company: "Financial Services Software Product",
   },
 ]
 
 export const industries = [
-  { name: "Healthcare", description: "HIPAA-compliant solutions for healthcare providers and health tech companies." },
-  { name: "Financial Services", description: "Secure, scalable systems for fintech, banking, and insurance." },
-  { name: "E-commerce", description: "High-performance platforms that convert visitors into customers." },
-  { name: "Enterprise Software", description: "Complex B2B applications that scale with your business." },
-  { name: "Professional Services", description: "Custom tools that streamline operations and client delivery." },
-  { name: "Technology", description: "Engineering support for startups and scale-ups building the future." },
+  {
+    name: "Independent Software Vendors (ISVs)",
+    slug: "isv",
+    description: "End-to-end product engineering services for software companies.",
+    detailedDescription: "Our 'Product Mindset' brings strong technology expertise in handling complex issues like security, access control, scalability, exception handling, and transactional consistency. We couple this with deep knowledge of the intricacies of product development and specific industry expertise.",
+    bullets: [
+      "Product Development",
+      "Product Testing",
+      "Product Modernization",
+      "Product Usability",
+      "Accelerated Process Adoption",
+      "Value Relationship",
+      "Strong Technology Expertise",
+    ],
+  },
+  {
+    name: "Media and New Media",
+    slug: "media",
+    description: "Digital transformation solutions for the evolving media landscape.",
+    detailedDescription: "We provide comprehensive web portal development, content management systems, and social media integration services. Our solutions help media companies adapt to the digital landscape with robust website functionalities and seamless integration with business applications.",
+    bullets: [
+      "Web Portal Development",
+      "Content Management System",
+      "Website Functionalities",
+      "Website Development, Maintenance and Support",
+      "QA Testing of Website Functions",
+      "Integrating Website Functionalities to Business Applications",
+      "Web server Administrative Services",
+      "Social Media Integration",
+    ],
+  },
+  {
+    name: "Pharma & Biotech",
+    slug: "pharma-biotech",
+    description: "Compliant and innovative technology for life sciences.",
+    detailedDescription: "Our expertise in technology and healthcare industry knowledge allows us to deliver compliant, scalable enterprise applications. We focus on regulatory compliance, independent verification, and building service-oriented architectures for agility.",
+    bullets: [
+      "Packaged Software Development, Enhancement, and Integration",
+      "Custom Application Development",
+      "SOA of Packaged Software and Applications",
+      "Independent Verification and Validation",
+      "Regulatory Compliance Services",
+      "Enterprise Characteristics",
+      "Accelerated Process Adoption",
+    ],
+  },
+  {
+    name: "Financial Services",
+    slug: "financial-services",
+    description: "Secure, high-performance fintech and banking solutions.",
+    detailedDescription: "We offer secure, high-performance solutions for the financial sector, including data warehousing, business intelligence, and core banking application support. Our multi-technology platform expertise ensures robust and compliant systems.",
+    bullets: [
+      "Business Requirements Analysis",
+      "Packaged Software Development, Enhancement and Integration",
+      "Application Development, Maintenance and Support",
+      "Data Warehousing",
+      "Business Intelligence, Analytics and Knowledge Services",
+      "Independent Verification and Validation",
+      "SOA of Packaged Software and Applications",
+    ],
+  },
+  {
+    name: "Energy & Green Energy",
+    slug: "energy",
+    description: "Smart technology for a sustainable future.",
+    detailedDescription: "Empowering energy companies with SCADA system integration, GIS systems, and business intelligence. We provide rapid prototyping ('Agility') and multi-technology expertise to optimize energy management and enterprise processes.",
+    bullets: [
+      "Business Requirements Analysis",
+      "Integration of SCADA, GIS, MIS, Inventory systems",
+      "Business Intelligence, Analytics and Knowledge Services",
+      "Independent Verification and Validation",
+      "SOA of Packaged Software and Applications",
+      "Agility - Rapid prototyping of solutions",
+      "Accelerated Process Adoption",
+    ],
+  },
+  {
+    name: "Education / eLearning",
+    slug: "education",
+    description: "Engaging and scalable learning platforms.",
+    detailedDescription: "Transforming education with learning technology development, training content creation, and eCommerce implementation. We specialize in learning analytics and secure, scalable eLearning platforms that drive engagement.",
+    bullets: [
+      "Learning Technology Development and Management",
+      "Training Content Development",
+      "Implementation of Ecommerce for training content",
+      "Learning Analytics & Reports Development",
+      "Independent Verification and Validation",
+      "Accelerated Process Adoption",
+    ],
+  },
 ]
 
 export const companyValues = [
@@ -280,3 +387,67 @@ export const resources = [
     `,
   },
 ]
+export const companyContent = {
+  about: [
+    "Gembrill helps its customers realize predictable project success and measurable ROI. Customers come to Gembrill to improve time-to-market, leverage best processes and technology, obtain excellent quality and reduce development and R&D costs.",
+    "Gembrill believes in strategic partnerships with customers that allow it to deliver value beyond just an outsourcing relationship.",
+  ],
+  valueProposition: {
+    description: "Our value proposition is built on creating strategic, long-term partnerships that deliver measurable business results.",
+    points: [
+      {
+        title: "Accelerated Process Adoption",
+        description:
+          "Strong internal processes and the ability to quickly adapt to customer processes help reduce risk and cost of execution considerably. This allows Gembrill to function in different roles: as an independent engineering partner, co-development partner, or extended engineering partner.",
+      },
+      {
+        title: "Value Relationship",
+        description:
+          "Gembrill invests in transparent and flexible engagement models that include low-risk pilots for our customers. During the pilot, customers gain first-hand experience of Gembrill's capabilities and understand the benefits of working with Gembrill. 95% of customer's sign up for a long-term project after the pilot.",
+      },
+      {
+        title: "Emerging Technology Expertise",
+        description:
+          "Our continuous investment in emerging technologies ensures that our clients always have access to the latest tools and frameworks to stay ahead of the competition.",
+      },
+    ],
+  },
+  mission: "To provide high quality and cost effective IT services to our customers.",
+  quality: {
+    description: "Our quality processes are integrated into every phase of the software development lifecycle.",
+    phases: [
+      {
+        phase: "Inception Phase",
+        description: "Focus is in collecting requirements and detecting risks.",
+      },
+      {
+        phase: "Elaboration Phase",
+        description: "Efforts are on designing a component-based architecture and implementing high-risk items.",
+      },
+      {
+        phase: "Construction & Deployment",
+        description: "Implementing and deploying the product with rigorous testing standards.",
+      },
+    ],
+  },
+  methodology: {
+    description: "We follow a structured yet flexible methodology to ensure predictable delivery.",
+    steps: [
+      "Requirements collection and Risk Assessment",
+      "System Architecting and Designing",
+      "Prioritizing High-risk items over low-risk items",
+      "Core Development and Unit/Module Testing",
+      "Comprehensive Testing (Functional, Performance, Security)",
+      "Trial Implementation",
+      "User Acceptance Testing",
+      "Deployment and Release",
+      "Support and Maintenance",
+    ],
+    outcomes: [
+      "On time solution delivery",
+      "Delivery of the solution within a fixed budget",
+      "Phased delivery of functionality to meet business deadlines",
+      "Delivery of a solution that delivers measurable business benefits",
+    ],
+  },
+}
