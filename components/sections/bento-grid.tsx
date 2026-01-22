@@ -57,9 +57,9 @@ function BentoCard({
                         {/* Show bullets for all cards */}
                         <ul className="space-y-3">
                             {service.bullets.slice(0, 3).map((bullet) => (
-                                <li key={bullet} className="flex items-center gap-3 text-sm text-muted-foreground/80">
+                                <li key={typeof bullet === "string" ? bullet : bullet.text} className="flex items-center gap-3 text-sm text-muted-foreground/80">
                                     <span className="h-1.5 w-1.5 rounded-full bg-primary/50" />
-                                    {bullet}
+                                    {typeof bullet === "string" ? bullet : bullet.text}
                                 </li>
                             ))}
                         </ul>

@@ -1,18 +1,21 @@
 import { notFound } from "next/navigation"
-import { services } from "@/lib/site-data"
+import { subServices, services } from "@/lib/site-data"
 import { Container, ButtonLink } from "@/components/ui-components"
 import { ArrowLeft, CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { LifecycleDiagram } from "@/components/sections/testing-lifecycle"
 
 export async function generateStaticParams() {
-    return services.map((service) => ({
-        slug: service.slug,
+    return subServices.map((service) => ({
+        slug: service.parentSlug,
+        subSlug: service.slug,
     }))
 }
 
-export default async function ServicePage(props: { params: Promise<{ slug: string }> }) {
+export default async function SubServicePage(props: { params: Promise<{ slug: string; subSlug: string }> }) {
     const params = await props.params
-    const service = services.find((s) => s.slug === params.slug)
+    const service = subServices.find((s) => s.slug === params.subSlug && s.parentSlug === params.slug)
+    const parentService = services.find((s) => s.slug === params.slug)
 
     if (!service) {
         notFound()
@@ -24,11 +27,11 @@ export default async function ServicePage(props: { params: Promise<{ slug: strin
                 <Container>
                     <div className="mx-auto max-w-4xl">
                         <Link
-                            href="/services"
+                            href={`/services#${service.parentSlug}`}
                             className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary mb-8 transition-colors"
                         >
                             <ArrowLeft className="h-4 w-4" />
-                            Back to Services
+                            Back to {parentService?.title || "Services"}
                         </Link>
                         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">{service.title}</h1>
                         <p className="mt-6 text-xl text-muted-foreground">{service.outcome}</p>
@@ -39,10 +42,14 @@ export default async function ServicePage(props: { params: Promise<{ slug: strin
             <section className="py-20">
                 <Container>
                     <div className="mx-auto max-w-4xl">
-                        {service.detailedDescription && (
-                            <div className="bg-card rounded-2xl border border-border p-8 shadow-sm mb-12">
-                                <h2 className="text-2xl font-bold text-foreground mb-4">Overview</h2>
-                                <p className="text-lg leading-relaxed text-muted-foreground">{service.detailedDescription}</p>
+                        <div className="bg-card rounded-2xl border border-border p-8 shadow-sm mb-12">
+                            <h2 className="text-2xl font-bold text-foreground mb-4">Overview</h2>
+                            <p className="text-lg leading-relaxed text-muted-foreground">{service.detailedDescription}</p>
+                        </div>
+
+                        {service.lifecycle && (
+                            <div className="mb-12">
+                                <LifecycleDiagram data={service.lifecycle} />
                             </div>
                         )}
 
@@ -52,14 +59,10 @@ export default async function ServicePage(props: { params: Promise<{ slug: strin
                                 <ul className="space-y-4">
                                     {service.bullets.map((bullet, index) => (
                                         <li key={index} className="flex items-start gap-3">
-                                            <CheckCircle className="h-6 w-6 flex-shrink-0 text-primary" />
-                                            {typeof bullet === "string" ? (
-                                                <span className="text-lg text-foreground">{bullet}</span>
-                                            ) : (
-                                                <a href={bullet.href} className="text-lg text-foreground hover:text-primary hover:underline transition-colors">
-                                                    {bullet.text}
-                                                </a>
-                                            )}
+                                            <div className="flex-shrink-0 mt-1">
+                                                <CheckCircle className="h-6 w-6 text-primary" />
+                                            </div>
+                                            <span className="text-lg text-foreground">{bullet}</span>
                                         </li>
                                     ))}
                                 </ul>

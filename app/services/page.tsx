@@ -38,10 +38,16 @@ export default function ServicesPage() {
                   <h2 className="mt-6 text-3xl font-bold text-foreground">{service.title}</h2>
                   <p className="mt-4 text-lg text-muted-foreground">{service.outcome}</p>
                   <ul className="mt-6 space-y-3">
-                    {service.bullets.map((bullet) => (
-                      <li key={bullet} className="flex items-start gap-3">
+                    {service.bullets.map((bullet, index) => (
+                      <li key={index} className="flex items-start gap-3">
                         <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-                        <span className="text-muted-foreground">{bullet}</span>
+                        {typeof bullet === "string" ? (
+                          <span className="text-muted-foreground">{bullet}</span>
+                        ) : (
+                          <a href={bullet.href} className="text-muted-foreground hover:text-primary hover:underline transition-colors">
+                            {bullet.text}
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -67,9 +73,10 @@ export default function ServicesPage() {
                 </div>
               </div>
             </Container>
-          </div>
-        ))}
-      </section>
+          </div >
+        ))
+        }
+      </section >
 
       <section className="border-t border-border bg-foreground py-20">
         <Container>

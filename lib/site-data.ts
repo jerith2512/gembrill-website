@@ -1,12 +1,39 @@
 export type NavItem = { label: string; href: string }
 
+
+export type Bullet = string | { text: string; href: string }
+
 export type Service = {
   slug: string
   title: string
   outcome: string
-  bullets: string[]
+  bullets: Bullet[]
   image: string
   detailedDescription?: string
+}
+
+
+export type LifecycleStep = {
+  title: string
+  items: string[]
+  iconName: "FileText" | "Code2" | "PlayCircle" | "FileBarChart" | "Settings" | "Wrench" | "RefreshCw"
+  color: string
+}
+
+export type Lifecycle = {
+  title: string
+  steps: LifecycleStep[]
+  modality?: "cycle" | "process" | "service-wheel"
+}
+
+export type SubService = {
+  slug: string
+  parentSlug: string
+  title: string
+  outcome: string
+  detailedDescription: string
+  bullets: string[]
+  lifecycle?: Lifecycle
 }
 
 export type CaseStudy = {
@@ -16,6 +43,7 @@ export type CaseStudy = {
   solution: string
   impact: string
 }
+
 
 export const nav: NavItem[] = [
   { label: "Services", href: "/services" },
@@ -45,10 +73,9 @@ export const services: Service[] = [
     outcome: "High quality and cost-effective IT services.",
     detailedDescription: "We provide comprehensive software development services across the entire value chain. From building robust enterprise applications that streamline your operations to developing custom solutions that give you a competitive edge, our team delivers high-quality code that scales.",
     bullets: [
-      "Enterprise Application Development",
-      "Custom Application Development",
-      "Application Modernization",
-      "Maintenance and Support",
+      { text: "Enterprise Application Development", href: "/services/software-development/enterprise-application-development" },
+      { text: "Custom Application Development", href: "/services/software-development/custom-application-development" },
+      { text: "Application Modernization", href: "/services/software-development/application-modernization" },
     ],
     image: "/images/software-development.png",
   },
@@ -58,13 +85,8 @@ export const services: Service[] = [
     outcome: "Robust portals that streamline information and collaboration.",
     detailedDescription: "We specialize in integrating various technologies and platforms to meet your specific needs. Our portals are designed to handle a large number of requests and transactions while remaining accessible across all devices and platforms. We ensure seamless content management and team collaboration.",
     bullets: [
-      "B2B, B2C and B2E Portals",
-      "Corporate Intranets",
-      "Portal Web Content Management",
-      "Social Media Integration",
-      "E-Commerce Solutions",
-      "Business Intelligence",
-      "SharePoint & Drupal Development",
+      { text: "SharePoint Development", href: "/services/portal-development/sharepoint-development" },
+      { text: "Drupal Development", href: "/services/portal-development/drupal-development" },
     ],
     image: "/images/portal-development.png",
   },
@@ -74,11 +96,9 @@ export const services: Service[] = [
     outcome: "Ensure quality with comprehensive testing strategies.",
     detailedDescription: "Quality is at the core of everything we do. Our comprehensive testing strategies cover the entire lifecycle, ensuring your software is bug-free, performant, and secure. We employ both manual and automated testing methodologies to catch issues early and reduce time-to-market.",
     bullets: [
-      "Functional Testing",
-      "Automation Testing",
-      "Performance Testing",
-      "Security Testing",
-      "Usability Testing",
+      { text: "Functional Testing", href: "/services/software-testing/functional-testing" },
+      { text: "Automation Testing", href: "/services/software-testing/automation-testing" },
+      { text: "Performance Testing", href: "/services/software-testing/performance-testing" },
     ],
     image: "/images/software-testing.png",
   },
@@ -110,6 +130,308 @@ export const services: Service[] = [
       "Access to global talent",
     ],
     image: "/images/outsourcing.png",
+  },
+]
+
+export const subServices: SubService[] = [
+  {
+    slug: "enterprise-application-development",
+    parentSlug: "software-development",
+    title: "Enterprise Application Development",
+    outcome: "Building applications for the connected enterprise.",
+    detailedDescription: "We build applications for the connected enterprise, taking integration of systems and re-use of assets into consideration at the design phase itself. Our expertise includes multi-protocol communication to communicate with diverse devices and user adoption through Web 2.0 level integration to make applications intuitive. We also specialize in the SOA-fication of existing applications to allow integration with other best-of-breed systems, and building business intelligence capabilities by integrating applications with reporting tools.",
+    bullets: [
+      "Building applications for the connected enterprise",
+      "Multi-protocol communication",
+      "User adoption and SOA-fication",
+      "Building business intelligence capabilities",
+      "Enablement of applications and business critical reports",
+      "Strong technology expertise in handling complex issues",
+      "Expertise in both legacy and newer technologies",
+      "Service Orientation (SOA expertise)",
+      "Accelerated Process Adoption",
+      "Value Relationship",
+    ],
+  },
+  {
+    slug: "custom-application-development",
+    parentSlug: "software-development",
+    title: "Custom Application Development",
+    outcome: "Tailored solutions for your unique business needs.",
+    detailedDescription: "We provide component development, distributed applications, and XML applications. Our team is proficient in programming with various enterprise-class technologies like J2EE, .NET, C++, and LAMP. We offer database design & consulting, portal development and implementation, performance tuning and optimization of applications, application re-engineering and re-factoring, and application maintenance and enhancement.",
+    bullets: [
+      "Client Server Applications, Web Applications",
+      "Component Development, Distributed Applications, and XML Applications",
+      "Programming in J2EE, .NET, C++, and LAMP",
+      "Database Design & Consulting",
+      "Portal Development and Implementation",
+      "Performance Tuning and Optimization",
+      "Application Re-engineering and Re-factoring",
+      "Application Maintenance and Enhancement",
+      "Expertise in legacy and newer technologies",
+      "De-risking to control business risk",
+      "Accelerated Process Adoption",
+      "Value Relationship",
+    ],
+  },
+  {
+    slug: "application-modernization",
+    parentSlug: "software-development",
+    title: "Application Modernization",
+    outcome: "Prioritizing modernization initiatives for greatest ROI.",
+    detailedDescription: "We start by understanding your application portfolio inventory, the application's technical reality, and your business processes. We then prioritize application modernization initiatives that will provide the greatest return on your investment. Our services include Application Enhancement, Application Migration, and Application Re-engineering.",
+    bullets: [
+      "Understanding application portfolio and business processes",
+      "Prioritization of modernization initiatives",
+      "Application Enhancement",
+      "Application Migration",
+      "Application Re-engineering",
+      "Deep technical knowledge and understanding of portfolios",
+      "Rich experience in handling modernization projects",
+      "Centre of Excellence in architecture and migration",
+      "Performance Optimization",
+      "Accelerated Process Adoption",
+    ],
+  },
+  {
+    slug: "functional-testing",
+    parentSlug: "software-testing",
+    title: "Functional Testing",
+    outcome: "Increase delivery confidence by validating and verifying business needs.",
+    detailedDescription: "The cost of remediating software defects in the production environment increases the overall software development costs, and this means that defect removal has to be prioritized. Gembrill helps organizations increase their delivery confidence by validating and verifying business needs along with testing the software. Gembrill's proven processes and efficient methodology ensure the quality of your software applications while minimizing the overall application development costs. Our functional testing services include the entire cycle of testing, which covers test consulting, development, execution and reporting.",
+    bullets: [
+      "24/7 Support - 24/7 release testing support and ability to scale the team to meet the release testing time frame",
+      "Delivery Confidence - Increased test coverage, increased reliability and reduced failure",
+      "Reduced Cost and Time - Integration with SDLC removes defects early and repeatable test plans ensure reduced cost and time",
+      "Strong Technology Expertise - Ready availability of certified testing practitioners with expertise in development practices for deployment in customer projects",
+      "Accelerated Process Adoption - SEI CMMi Level 5 processes and flexibility to adhere to customer processes reduce risk and cost of execution",
+    ],
+    lifecycle: {
+      title: "Testing Lifecycle",
+      steps: [
+        {
+          title: "Specifications",
+          iconName: "FileText",
+          color: "bg-blue-100 text-blue-600 border-blue-200",
+          items: [
+            "Understand the software",
+            "Specifications documentation, use cases, screens etc.",
+            "Set up the test environment",
+            "Sign-off",
+          ],
+        },
+        {
+          title: "Development",
+          iconName: "Code2",
+          color: "bg-orange-100 text-orange-600 border-orange-200",
+          items: [
+            "Develop test plan and QA schedule",
+            "Develop test cases",
+            "Validate test scripts",
+            "Test case review and sign-off",
+          ],
+        },
+        {
+          title: "Execution",
+          iconName: "PlayCircle",
+          color: "bg-green-100 text-green-600 border-green-200",
+          items: [
+            "Execute test cases",
+            "Report defects to the defect tracking tool",
+            "Re-validate & verify the fixed defects and close them",
+            "Perform regression testing",
+          ],
+        },
+        {
+          title: "Reports",
+          iconName: "FileBarChart",
+          color: "bg-amber-100 text-amber-600 border-amber-200",
+          items: ["Test summary report", "Sign-off"],
+        },
+      ],
+    },
+  },
+  {
+    slug: "automation-testing",
+    parentSlug: "software-testing",
+    title: "Automation Testing",
+    outcome: "Improve delivery confidence and decrease long-term costs.",
+    detailedDescription: "Automation of manual efforts can result in positive return on investment and at the same time will improve the delivery confidence of the software. Gembrill partners with its customers to automate their software testing and improve the quality of their delivery while decreasing long-term costs substantially. Gembrill considers a number of parameters for automation testing that include: Maturity of the software, Number of regression test cases, Percentage of test cases that can be automated, Number of releases expected in a year, Number of regressions for every release, Appropriate automation tool, Ability and skills of resources to do script development, and Cost of the tool and the roadmap for the software. Gembrill provides a comprehensive automation solution for the quality assurance (QA) needs of any ISV.",
+    bullets: [
+      "Delivery Confidence - increased test coverage, increased reliability and reduced failure",
+      "Reduced Cost and Time - 80% reduction in time and 30% reduction in costs over extended periods of automation",
+      "Strong Technology Expertise - Experience and expertise in a variety of test management tools and test automation tools; experience in developing scripts and automation frameworks",
+      "Accelerated Process Adoption - SEI CMMi Level 5 processes and flexibility to adhere to customer processes reduce risk and cost of execution",
+      "Value Relationship - Transparent and flexible engagement models including low-risk pilots",
+    ],
+    lifecycle: {
+      title: "Automation Lifecycle",
+      steps: [
+        {
+          title: "Consulting",
+          iconName: "Settings",
+          color: "bg-blue-100 text-blue-600 border-blue-200",
+          items: [
+            "Evaluate the software-if it is right for automation",
+            "Choose a tool",
+            "Perform a POC through automation of a few scenarios/complex workflows.",
+            "Validate the suitability of the tool",
+          ],
+        },
+        {
+          title: "Development",
+          iconName: "Code2",
+          color: "bg-orange-100 text-orange-600 border-orange-200",
+          items: [
+            "Build automation testing framework",
+            "Design & Develop test scripts",
+            "Check readiness of test environment",
+          ],
+        },
+        {
+          title: "Execution",
+          iconName: "PlayCircle",
+          color: "bg-green-100 text-green-600 border-green-200",
+          items: [
+            "Scheduling and execution of test scripts",
+            "Conduct analysis and report any defect in the defect tracking tool",
+            "Fix defects",
+            "Test execution report",
+          ],
+        },
+        {
+          title: "Maintenance",
+          iconName: "Wrench",
+          color: "bg-orange-100 text-orange-600 border-orange-200",
+          items: [
+            "Analysis of test scripts",
+            "Implement Change requests and update scripts",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "performance-testing",
+    parentSlug: "software-testing",
+    title: "Performance Testing",
+    outcome: "Ensure optimal performance and stability for your users.",
+    detailedDescription: "Performance issues identified after software launch involves costly remedial work. Users refuse to tolerate a second rate software and demand a quality product. Performance testing and engineering ensures the optimal performance of your application for users. Gembrill specializes in performance testing, which focuses on addressing various scalability and performance issues of software and its IT infrastructure. Guided by knowledge of the development life cycle, performance engineering expertise and technical expertise, Gembrill helps its customers deploy highly robust, scalable, and interoperable software. Our services include Performance Benchmarking, Load Testing, Stress Testing, Performance testing at different layers (including network, middleware and application layers), Performance Tuning Services, and Performance management (CPU, memory, response times, system outage, input/output, infrastructure and network bandwidth).",
+    bullets: [
+      "Delivery Confidence - Increased reliability and stability of the application",
+      "Risk Mitigation - Reduce the risks of application failure in a live environment; better utilization of resources post deployment",
+      "Reduced Cost - 30% reduction in costs on the overall application development costs",
+      "Strong Technology expertise - Experience and expertise in a variety of performance testing tools and working with multiple enterprises",
+      "Accelerated Process Adoption - SEI CMMI Level 5 processes and flexibility to adhere to customer processes reduce risk and cost of execution",
+      "Value Relationship - Transparent and flexible engagement models including low-risk pilots",
+    ],
+    lifecycle: {
+      title: "Performance Testing Cycle",
+      modality: "process",
+      steps: [
+        {
+          title: "Understand the performance capabilities/needs of the software",
+          items: [],
+          iconName: "FileText",
+          color: "bg-[#e17039] text-white border-[#e17039]",
+        },
+        {
+          title: "Tools Evaluation",
+          items: [],
+          iconName: "Settings",
+          color: "bg-[#829db7] text-white border-[#829db7]",
+        },
+        {
+          title: "Scripting",
+          items: [],
+          iconName: "Code2",
+          color: "bg-[#d8b056] text-white border-[#d8b056]",
+        },
+        {
+          title: "Test Data",
+          items: [],
+          iconName: "FileBarChart",
+          color: "bg-[#f4deb3] text-stone-600 border-[#f4deb3]",
+        },
+        {
+          title: "Testing",
+          items: [],
+          iconName: "PlayCircle",
+          color: "bg-[#9cc17a] text-white border-[#9cc17a]",
+        },
+        {
+          title: "Reports",
+          items: [],
+          iconName: "FileText",
+          color: "bg-[#dcaec3] text-white border-[#dcaec3]",
+        },
+      ],
+    },
+  },
+  {
+    slug: "sharepoint-development",
+    parentSlug: "portal-development",
+    title: "SharePoint Development",
+    outcome: "Deploy and share knowledge efficiently across your organization.",
+    detailedDescription: "Businesses today are dependent on effective exchange of information and Microsoft Office SharePoint Server (MOSS 2007) is increasingly used where businesses want to deploy and share knowledge and management information online across a wide group of stakeholders. SharePoint provides a portal through which diverse set of people can access even more diverse set of information. MOSS can be used as an application development framework to put together working applications quickly by leveraging out-of-the-box features of SharePoint. MOSS also allows customizations and creation of web parts to go with your applications. Gembrill is a Microsoft Gold Certified Partner with expertise on the complete Microsoft technology stack and offers both turnkey and piecemeal services on SharePoint. MOSS is based on ASP.NET and SQL technologies, which makes it compatible with majority of applications. Gembrill's SharePoint practice offers MOSS services that leverage all the benefits of MOSS.",
+    bullets: [
+      "Experience & Expertise - Deep expertise and experience in architecting, implementing and migrating solutions on SharePoint (2003 & 2007) framework helps us map product functionalities to various business scenarios, thereby providing our clients with the best possible solution",
+      "Technology - Expertise in MOSS 2007, WSS 3.0, SharePoint Designer 2007, WWF 3.0, WCF 3.0, WPF, Silverlight and .NET stack",
+      "Governance - Gembrill has built SharePoint Governance model and Training & Adoption roadmap that ensures successful rollout and acceptance of SharePoint",
+      "Add-ons - Expertise in creating and supporting custom applications and web parts",
+      "Accelerated Process Adoption - SEI CMMi level 5 processes and flexibility to adhere to customer processes for reducing risk and cost of execution",
+      "Value Relationship - Microsoft Gold Certified Partner with transparent and flexible engagement models including low-risk pilots",
+    ],
+  },
+  {
+    slug: "drupal-development",
+    parentSlug: "portal-development",
+    title: "Drupal Development",
+    outcome: "Accelerate your business success with integrated Drupal portals.",
+    detailedDescription: "The need for integrated portals across businesses is only growing and every enterprise is figuring out a way to get their portal strategy right, which will accelerate their business success. Drupal as a framework, offers a fantastic choice for enterprises to build their portal strategy, irrespective of the nature of their business need - be it B2B, B2C or B2E. Gembrill has years of experience in developing and implementing Drupal for customers. Gembrill can customize Drupal addressing the content management, intranet, eCommerce, portal, custom application and social media needs of the customers.",
+    bullets: [
+      "Credibility - experience of having implemented multiple high volume and high transaction portal sites based on Drupal framework",
+      "Knowledge - extensive knowledge on the core Drupal framework, customization skills, expertise in apache-mysql-php stack allows us to quickly put together portals",
+      "Process - effective governance model of Drupal development and knowledge on various iterative and incremental development methodologies",
+      "Security - ensuring hack and crack-free portals by continuous monitoring of vulnerabilities and keeping track of patches",
+      "Value relationship - transparent and flexible engagement models including low-risk pilots, fixed bid, dedicated teams, time & material and outcome-based relationships",
+    ],
+    lifecycle: {
+      title: "Gembrill's Drupal Development services include",
+      modality: "service-wheel",
+      steps: [
+        {
+          title: "Drupal Consulting",
+          items: [],
+          iconName: "Settings",
+          color: "bg-blue-600 text-white border-blue-600",
+        },
+        {
+          title: "Drupal Design",
+          items: [],
+          iconName: "Code2",
+          color: "bg-blue-500 text-white border-blue-500",
+        },
+        {
+          title: "Drupal Development",
+          items: [],
+          iconName: "Code2",
+          color: "bg-blue-400 text-white border-blue-400",
+        },
+        {
+          title: "Drupal Support",
+          items: [],
+          iconName: "Wrench",
+          color: "bg-blue-500 text-white border-blue-500",
+        },
+        {
+          title: "Drupal Maintenance and Performance",
+          items: [],
+          iconName: "RefreshCw",
+          color: "bg-blue-600 text-white border-blue-600",
+        },
+      ],
+    },
   },
 ]
 

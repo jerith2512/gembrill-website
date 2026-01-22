@@ -33,9 +33,15 @@ export function ServicesGrid() {
                 <p className="mt-2 text-sm text-muted-foreground">{service.outcome}</p>
                 <ul className="mt-4 flex-1 space-y-2">
                   {service.bullets.map((bullet) => (
-                    <li key={bullet} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <li key={typeof bullet === "string" ? bullet : bullet.text} className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                      {bullet}
+                      {typeof bullet === "string" ? (
+                        bullet
+                      ) : (
+                        <a href={bullet.href} className="hover:text-primary hover:underline transition-colors">
+                          {bullet.text}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>

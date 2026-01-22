@@ -7,12 +7,12 @@ export function Hero() {
   return (
     <section
       className="relative overflow-hidden py-32 sm:py-48"
-      style={{ background: "#FF7518" }}
+      style={{ background: "#FF8C42" }}
     >
       <div
         className="absolute inset-0 z-0 opacity-20"
         style={{
-          backgroundImage: "radial-gradient(#ffffff 1.5px, transparent 1.5px)",
+          backgroundImage: "radial-gradient(#FF6B00 1.5px, transparent 1.5px)",
           backgroundSize: "12px 12px",
         }}
       />
@@ -38,11 +38,11 @@ export function Hero() {
             Start Project
           </ButtonLink>
           <ButtonLink
-            href="/work"
+            href="/services"
             variant="outline"
             className="rounded-full border-black/30 px-8 py-6 text-base text-black transition-colors duration-300 hover:bg-black hover:text-white"
           >
-            View Work <ArrowRight className="ml-2 h-4 w-4" />
+            View Services <ArrowRight className="ml-2 h-4 w-4" />
           </ButtonLink>
         </div>
       </Container>

@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Container } from "./ui-components"
 import { nav, services } from "@/lib/site-data"
-import { Facebook, Twitter } from "lucide-react"
+import { Facebook, Twitter, Linkedin } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -108,6 +108,15 @@ export default function Footer() {
                 <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
                 <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
               </svg>
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/gembrill-technologies-india/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground/60 transition-colors hover:text-primary"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-5 w-5" />
             </Link>
             <div className="h-4 w-px bg-border/40" />
             <Link href="/privacy" className="text-sm text-muted-foreground/60 hover:text-primary">

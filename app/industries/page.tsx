@@ -36,7 +36,7 @@ export default function IndustriesPage() {
                     <ButtonLink
                       href={`/industries/${industry.slug}`}
                       variant="secondary"
-                      className="group-hover:bg-primary group-hover:text-primary-foreground"
+                      className="group-hover:bg-primary group-hover:text-primary-foreground hover:bg-primary hover:text-primary-foreground"
                     >
                       Learn More
                       <ArrowRight className="h-4 w-4" />
