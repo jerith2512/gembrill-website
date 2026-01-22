@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# Os files
+*.DS_Store
+
 # next.js
 /.next/
 /out/
