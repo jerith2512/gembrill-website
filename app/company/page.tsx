@@ -15,7 +15,7 @@ export default function CompanyPage() {
               Engineering excellence, delivered
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              We're a team of senior engineers passionate about building software that works. For over 12 years, we've
+              We're a team of senior engineers passionate about building software that works. For over 22 years, we've
               helped companies modernize legacy systems, ship new products, and build QA programs that catch bugs
               before users do.
             </p>

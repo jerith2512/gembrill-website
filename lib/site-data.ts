@@ -119,7 +119,7 @@ export const services: Service[] = [
   },
   {
     slug: "outsourcing",
-    title: "Out Sourcing",
+    title: "Outsourcing",
     outcome: "Strategic partnerships that deliver value beyond checking boxes.",
     detailedDescription: "We believe in strategic partnerships that deliver value beyond just a transactional outsourcing relationship. By leveraging our global talent pool and proven methodologies, we help you improve time-to-market and significantly reduce development and R&D costs.",
     bullets: [
