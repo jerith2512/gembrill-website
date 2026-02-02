@@ -45,7 +45,7 @@ export default function Careers() {
                     <section className="grid gap-12 lg:grid-cols-2 lg:items-center">
                         <div className="order-2 lg:order-1 overflow-hidden rounded-2xl bg-muted/50">
                             <Image
-                                src="/images/careers-office.png"
+                                src="/images/careers-work-environment.png"
                                 alt="Gembrill Modern Office Environment"
                                 width={800}
                                 height={600}
@@ -110,15 +110,11 @@ export default function Careers() {
                         </p>
                         <div className="mt-8 flex justify-center">
                             <div className="inline-flex flex-col items-center gap-4 rounded-xl border border-border bg-card px-8 py-6 text-lg font-medium text-foreground shadow-sm sm:flex-row sm:gap-8">
-                                <div className="flex items-center gap-3">
+                                <a href="mailto:info@gembrill.com" className="flex items-center gap-3 hover:text-primary transition-colors">
                                     <Mail className="h-5 w-5 text-primary" />
                                     <span>info@gembrill.com</span>
-                                </div>
-                                <div className="hidden h-6 w-px bg-border sm:block" />
-                                <div className="flex items-center gap-3">
-                                    <Phone className="h-5 w-5 text-primary" />
-                                    <span>+91 44 4296 9596</span>
-                                </div>
+                                </a>
+
                             </div>
                         </div>
                     </div>

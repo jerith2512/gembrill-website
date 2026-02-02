@@ -19,7 +19,7 @@ export default function Footer() {
                 className="h-24 w-auto opacity-90 transition-opacity hover:opacity-100"
               />
             </Link>
-            <p className="mt-6 text-base font-medium leading-relaxed text-muted-foreground max-w-xs">
+            <p className="mt-6 text-base font-medium leading-relaxed text-black max-w-xs">
               Engineering the future of digital experiences with precision and clarity.
             </p>
           </div>
@@ -29,7 +29,7 @@ export default function Footer() {
             <ul className="mt-6 space-y-4">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-base text-muted-foreground/80 transition-colors hover:text-primary">
+                  <Link href={item.href} className="text-base text-black transition-colors hover:text-primary">
                     {item.label}
                   </Link>
                 </li>
@@ -44,7 +44,7 @@ export default function Footer() {
                 <li key={service.slug}>
                   <Link
                     href={`/services#${service.slug}`}
-                    className="text-base text-muted-foreground/80 hover:text-primary"
+                    className="text-base text-black hover:text-primary"
                   >
                     {service.title}
                   </Link>
@@ -56,16 +56,15 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h3 className="text-sm font-semibold tracking-wide text-foreground uppercase">Contact</h3>
             <ul className="mt-6 space-y-4">
-              <li className="text-base text-muted-foreground/80">
+              <li className="text-base text-black">
                 <span className="mb-2 block font-medium text-foreground">Gembrill Technologies India Private Limited.</span>
                 01, First Floor, OMS Court, Nathamuni Street, GN Chetty Road, T.Nagar, Chennai - 600 017, Tamil Nadu, India
               </li>
-              <li className="text-base text-muted-foreground/80">
-                +91 96000 10212<br />
-                +91 44 4296 9596
+              <li className="text-base text-black">
+                <a href="tel:+919600010212" className="hover:text-primary transition-colors">+91 96000 10212</a>
               </li>
-              <li className="text-base text-muted-foreground/80">
-                info@gembrill.com
+              <li className="text-base text-black">
+                <a href="mailto:info@gembrill.com" className="hover:text-primary transition-colors">info@gembrill.com</a>
               </li>
               <li>
                 <Link href="/contact" className="text-base font-medium text-primary hover:text-primary/80">
@@ -77,13 +76,13 @@ export default function Footer() {
         </div>
 
         <div className="mt-20 flex flex-col items-center justify-between gap-6 border-t border-border/40 pt-8 sm:flex-row">
-          <p className="text-sm text-muted-foreground/60">© {new Date().getFullYear()} Gembrill. All rights reserved.</p>
+          <p className="text-sm text-black">© {new Date().getFullYear()} Gembrill. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link
               href="https://www.facebook.com/gembrill.india/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground/60 transition-colors hover:text-primary"
+              className="text-black transition-colors hover:text-primary"
               aria-label="Facebook"
             >
               <Facebook className="h-5 w-5" />
@@ -92,7 +91,7 @@ export default function Footer() {
               href="https://x.com/GembrillIndia"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground/60 transition-colors hover:text-primary"
+              className="text-black transition-colors hover:text-primary"
               aria-label="X (Twitter)"
             >
               {/* Custom X icon using SVG since standard Lucide might be older Twitter bird */}
@@ -113,16 +112,16 @@ export default function Footer() {
               href="https://www.linkedin.com/company/gembrill-technologies-india/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground/60 transition-colors hover:text-primary"
+              className="text-black transition-colors hover:text-primary"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-5 w-5" />
             </Link>
             <div className="h-4 w-px bg-border/40" />
-            <Link href="/privacy" className="text-sm text-muted-foreground/60 hover:text-primary">
+            <Link href="/privacy" className="text-sm text-black hover:text-primary">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-sm text-muted-foreground/60 hover:text-primary">
+            <Link href="/terms" className="text-sm text-black hover:text-primary">
               Terms of Service
             </Link>
           </div>

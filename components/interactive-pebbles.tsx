@@ -45,12 +45,10 @@ export function InteractivePebbles() {
             canvas.height = window.innerHeight
             particleArray = []
 
-            const numberOfParticles = 5000 // Doubled density as requested
-            // Create a grid-like or random distribution? 
-            // User said "fill that place", random distribution looks more like "pebbles" on the ground.
+            const numberOfParticles = 150 // Optimized for performance
 
             for (let i = 0; i < numberOfParticles; i++) {
-                const size = Math.random() * 3 + 1 // Pebble size 1-4px
+                const size = Math.random() * 3 + 1
                 const x = Math.random() * canvas.width
                 const y = Math.random() * canvas.height
                 // Orange shades

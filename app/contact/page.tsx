@@ -42,8 +42,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Phone</h3>
-                  <p className="mt-1 text-lg text-muted-foreground">+91 96000 10212</p>
-                  <p className="text-lg text-muted-foreground">+91 44 4296 9596</p>
+                  <a href="tel:+919600010212" className="mt-1 block text-lg text-muted-foreground hover:text-primary transition-colors">+91 96000 10212</a>
+
                 </div>
               </div>
             </Card>

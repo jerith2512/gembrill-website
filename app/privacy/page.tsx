@@ -45,9 +45,9 @@ export default function PrivacyPolicy() {
                             personal information on file and use it to contact you for the above purposes. If you do not wish to receive
                             non-essential e-mail communications concerning Gembrill's products or services, you can opt out of
                             receiving this information by contacting Gembrill at{" "}
-                            <Link href="mailto:info@gembrill.com" className="text-primary hover:underline">
+                            <a href="mailto:info@gembrill.com" className="text-primary hover:underline">
                                 info@gembrill.com
-                            </Link>
+                            </a>
                             .
                         </p>
                     </section>
@@ -87,9 +87,9 @@ export default function PrivacyPolicy() {
                         <h2 className="text-2xl font-semibold tracking-tight text-foreground">Contacting the Site</h2>
                         <p className="text-base leading-relaxed text-muted-foreground">
                             If you have any questions about Gembrill's Privacy Policy, you can contact{" "}
-                            <Link href="mailto:info@gembrill.com" className="text-primary hover:underline">
+                            <a href="mailto:info@gembrill.com" className="text-primary hover:underline">
                                 info@gembrill.com
-                            </Link>
+                            </a>
                             .
                         </p>
                     </section>

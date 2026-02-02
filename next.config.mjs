@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    ignoreBuildErrors: true,
+    // strict type checking enabled
   },
   images: {
-    unoptimized: true,
+    // optimizations enabled
   },
 }
 
