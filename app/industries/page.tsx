@@ -1,15 +1,12 @@
-import type React from "react"
 import { Container, SectionTitle, Card, ButtonLink } from "@/components/ui-components"
 import { industries } from "@/lib/site-data"
-import { ArrowRight, DollarSign, Cpu, Clapperboard, FlaskConical, Zap, GraduationCap } from "lucide-react"
+import { ArrowRight, Code, ShieldCheck, Server, TrendingUp } from "lucide-react"
 
 const iconMap: Record<string, React.ReactNode> = {
-  "Independent Software Vendors (ISVs)": <Cpu className="h-6 w-6" />,
-  "Media and New Media": <Clapperboard className="h-6 w-6" />,
-  "Pharma & Biotech": <FlaskConical className="h-6 w-6" />,
-  "Financial Services": <DollarSign className="h-6 w-6" />,
-  "Energy & Green Energy": <Zap className="h-6 w-6" />,
-  "Education / eLearning": <GraduationCap className="h-6 w-6" />,
+  "Software Development": <Code className="h-6 w-6" />,
+  "Quality Assurance (QA)": <ShieldCheck className="h-6 w-6" />,
+  "IT & DevOps": <Server className="h-6 w-6" />,
+  "Sales": <TrendingUp className="h-6 w-6" />,
 }
 
 export default function IndustriesPage() {
@@ -19,11 +16,11 @@ export default function IndustriesPage() {
         <Container>
           <SectionTitle
             eyebrow="Industries"
-            title="Deep expertise across sectors"
-            subtitle="We understand the unique challenges and requirements of your industry."
+            title="Deep expertise across key domains"
+            subtitle="We understand the unique challenges and requirements of your domain."
           />
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
             {industries.map((industry) => (
               <Card key={industry.name} className="group">
                 <div className="p-6">
