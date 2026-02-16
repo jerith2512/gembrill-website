@@ -11,7 +11,7 @@ import clsx from "clsx"
 const iconMap: Record<string, React.ReactNode> = {
     "product-engineering": <Cpu className="h-6 w-6" />,
     "software-development": <Code className="h-6 w-6" />,
-    "portal-development": <Layout className="h-6 w-6" />,
+    "intelligent-portals": <Layout className="h-6 w-6" />,
     "software-testing": <ShieldCheck className="h-6 w-6" />,
     "bpo-services": <Headphones className="h-6 w-6" />,
     "outsourcing": <Handshake className="h-6 w-6" />,
@@ -91,8 +91,8 @@ export function BentoGrid() {
             <Container>
                 <SectionTitle
                     eyebrow="Our Expertise"
-                    title="World-class services."
-                    subtitle="Precision engineering meets strategic innovation."
+                    title="World-class AI & Engineering."
+                    subtitle="Precision engineering meets strategic AI innovation."
                     className="mb-16 md:mb-24"
                 />
 

@@ -12,12 +12,12 @@ export default function CompanyPage() {
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-sm font-semibold uppercase tracking-wider text-primary">About Us</span>
             <h1 className="mt-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Engineering excellence, delivered
+              Engineering the Intelligent Future
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              We're a team of senior engineers passionate about building software that works. For over 22 years, we've
-              helped companies modernize legacy systems, ship new products, and build QA programs that catch bugs
-              before users do.
+              We're a team of senior engineers and AI experts passionate about building intelligent software. For over 22 years, we've
+              helped companies modernize legacy systems, deploy GenAI solutions, and build predictive QA programs that prevent bugs
+              before they exist.
             </p>
           </div>
         </Container>
@@ -40,7 +40,7 @@ export default function CompanyPage() {
         <Container>
           <SectionTitle
             eyebrow="Value Proposition"
-            title="Strategic partnerships that deliver results"
+            title="Strategic AI partnerships that deliver results"
             subtitle={companyContent.valueProposition.description}
           />
           <div className="mt-12 grid gap-8 lg:grid-cols-3">
@@ -71,7 +71,7 @@ export default function CompanyPage() {
         <Container>
           <SectionTitle
             eyebrow="Quality"
-            title="Quality integrated into every phase"
+            title="Intelligent Quality at every phase"
             subtitle={companyContent.quality.description}
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
@@ -92,7 +92,7 @@ export default function CompanyPage() {
             <div>
               <SectionTitle
                 eyebrow="Methodology"
-                title="Structured for predictable delivery"
+                title="Structured for intelligent delivery"
                 subtitle={companyContent.methodology.description}
                 align="left"
               />

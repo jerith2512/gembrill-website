@@ -6,7 +6,7 @@ import { ArrowRight, Code, Layout, Cpu, ShieldCheck, Headphones, Handshake } fro
 const iconMap: Record<string, React.ReactNode> = {
   "product-engineering": <Cpu className="h-5 w-5" />,
   "software-development": <Code className="h-5 w-5" />,
-  "portal-development": <Layout className="h-5 w-5" />,
+  "intelligent-portals": <Layout className="h-5 w-5" />,
   "software-testing": <ShieldCheck className="h-5 w-5" />,
   "bpo-services": <Headphones className="h-5 w-5" />,
   "outsourcing": <Handshake className="h-5 w-5" />,
@@ -18,8 +18,8 @@ export function ServicesGrid() {
       <Container>
         <SectionTitle
           eyebrow="Solutions"
-          title="Services designed for measurable delivery"
-          subtitle="Choose a capability, see typical outcomes, and move quickly into a structured discovery."
+          title="Intelligent Services for Future-Ready Business"
+          subtitle="Choose a capability, see AI-driven outcomes, and move quickly into a structured discovery."
         />
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

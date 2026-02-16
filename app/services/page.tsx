@@ -7,7 +7,7 @@ import { ArrowRight, Code, CheckCircle, Layout, Cpu, ShieldCheck, Headphones, Ha
 const iconMap: Record<string, React.ReactNode> = {
   "product-engineering": <Cpu className="h-6 w-6" />,
   "software-development": <Code className="h-6 w-6" />,
-  "portal-development": <Layout className="h-6 w-6" />,
+  "intelligent-portals": <Layout className="h-6 w-6" />,
   "software-testing": <ShieldCheck className="h-6 w-6" />,
   "bpo-services": <Headphones className="h-6 w-6" />,
   "outsourcing": <Handshake className="h-6 w-6" />,

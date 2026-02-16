@@ -1,22 +1,22 @@
 export const metrics = [
-    { value: "98%", label: "On-time delivery" },
+    { value: "98%", label: "AI-driven efficiency" },
     { value: "40%", label: "Avg. cycle time reduction" },
-    { value: "85%", label: "Test coverage achieved" },
-    { value: "22+", label: "Years in business" },
+    { value: "85%", label: "Automated test coverage" },
+    { value: "22+", label: "Years of innovation" },
 ]
 
 export const processSteps = [
-    { step: "01", title: "Discovery", description: "Define scope, goals, and constraints in a structured kickoff." },
-    { step: "02", title: "Planning", description: "Break work into milestones with clear deliverables." },
-    { step: "03", title: "Execution", description: "Build, test, and ship in iterative cycles." },
-    { step: "04", title: "Delivery", description: "Review outcomes and hand off with documentation." },
+    { step: "01", title: "Discovery", description: "Define scope, goals, and AI opportunities in a structured kickoff." },
+    { step: "02", title: "Planning", description: "Architect intelligent solutions with clear milestones." },
+    { step: "03", title: "Execution", description: "Build, train models, and test in iterative agile cycles." },
+    { step: "04", title: "Delivery", description: "Deploy AI-ready systems and hand off with documentation." },
 ]
 
 export const whyUs = [
-    { title: "Predictable Success", description: "Realize predictable project success and measurable ROI." },
-    { title: "Time-to-Market", description: "Improve time-to-market with our efficient delivery models." },
-    { title: "Quality & Cost", description: "High quality services that reduce development and R&D costs." },
-    { title: "IP Protection", description: "Strong respect for and protection of customer's intellectual property rights." },
+    { title: "Predictable Innovation", description: "Realize predictable success with AI-driven insights and measurable ROI." },
+    { title: "Accelerated Time-to-Market", description: "Launch faster with our AI-enhanced delivery models." },
+    { title: "Intelligent Quality", description: "High-quality engineering that reduces technical debt and R&D costs." },
+    { title: "Data Security & IP", description: "Enterprise-grade security and protection of your intellectual property." },
 ]
 
 export const companyValues = [
@@ -28,8 +28,8 @@ export const companyValues = [
 
 export const companyContent = {
     about: [
-        "Gembrill helps its customers realize predictable project success and measurable ROI. Customers come to Gembrill to improve time-to-market, leverage best processes and technology, obtain excellent quality and reduce development and R&D costs.",
-        "Gembrill believes in strategic partnerships with customers that allow it to deliver value beyond just an outsourcing relationship.",
+        "Gembrill helps its customers realize predictable project success and measurable ROI through AI-driven engineering. Customers come to Gembrill to accelerate digital transformation, leverage intelligent automation, and optimize development costs.",
+        "We believe in strategic partnerships that go beyond traditional outsourcing, acting as your co-innovation partner for the AI era.",
     ],
     valueProposition: {
         description: "Our value proposition is built on creating strategic, long-term partnerships that deliver measurable business results.",
@@ -45,19 +45,19 @@ export const companyContent = {
                     "Gembrill invests in transparent and flexible engagement models that include low-risk pilots for our customers. During the pilot, customers gain first-hand experience of Gembrill's capabilities and understand the benefits of working with Gembrill. 95% of customer's sign up for a long-term project after the pilot.",
             },
             {
-                title: "Emerging Technology Expertise",
+                title: "Emerging Technology & AI",
                 description:
-                    "Our continuous investment in emerging technologies ensures that our clients always have access to the latest tools and frameworks to stay ahead of the competition.",
+                    "Our continuous investment in Generative AI, Machine Learning, and Cloud-Native technologies ensures that our clients always have access to the most advanced tools to stay ahead of the competition.",
             },
         ],
     },
-    mission: "To provide high quality and cost effective IT services to our customers.",
+    mission: "To provide high-quality, AI-enabled IT services that drive cost-effectiveness and innovation.",
     quality: {
         description: "Our quality processes are integrated into every phase of the software development lifecycle.",
         phases: [
             {
                 phase: "Inception Phase",
-                description: "Focus is in collecting requirements and detecting risks.",
+                description: "Focus is on data collection, requirements analysis, and AI feasibility assessment.",
             },
             {
                 phase: "Elaboration Phase",
@@ -72,11 +72,11 @@ export const companyContent = {
     methodology: {
         description: "We follow a structured yet flexible methodology to ensure predictable delivery.",
         steps: [
-            "Requirements collection and Risk Assessment",
-            "System Architecting and Designing",
-            "Prioritizing High-risk items over low-risk items",
-            "Core Development and Unit/Module Testing",
-            "Comprehensive Testing (Functional, Performance, Security)",
+            "Requirements collection and AI Opportunity Assessment",
+            "System Architecting and Intelligent Design",
+            "Prioritizing High-value features",
+            "Core Development and AI Model Integration",
+            "Comprehensive Testing (Automated, Performance, Security)",
             "Trial Implementation",
             "User Acceptance Testing",
             "Deployment and Release",

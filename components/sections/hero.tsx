@@ -18,16 +18,16 @@ export function Hero() {
       />
       <Container className="relative z-10 flex flex-col items-center text-center">
         <span className="mb-6 inline-block rounded-full border border-black/10 bg-black/5 px-4 py-1.5 text-sm font-medium tracking-wide text-black/80 backdrop-blur-md">
-          The Future of Engineering
+          Engineering the Future of AI
         </span>
 
         <h1 className="text-balance bg-gradient-to-r from-black to-white bg-clip-text px-2 text-5xl font-bold tracking-tighter text-transparent sm:text-6xl lg:text-8xl">
           Digital <br className="hidden sm:block" />
-          <span>Perfection.</span>
+          <span>Intelligence.</span>
         </h1>
 
         <p className="mt-8 max-w-2xl text-xl font-light leading-relaxed text-black/80 sm:text-2xl">
-          We build, modernize, and QA software with predictable success and measurable ROI.
+          We build, modernize, and QA software with predictable success and AI-driven measurable ROI.
         </p>
 
         <div className="mt-10 flex gap-4">

@@ -1,12 +1,12 @@
 import { Container, SectionTitle, Card } from "@/components/ui-components"
 import { whyUs } from "@/lib/site-data"
-import { Target, Rocket, Gem, Shield } from "lucide-react"
+import { Target, Rocket, Gem, Shield, BrainCircuit, Bot, ShieldCheck } from "lucide-react"
 
 const iconMap: Record<string, React.ReactNode> = {
-  "Predictable Success": <Target className="h-5 w-5" />,
-  "Time-to-Market": <Rocket className="h-5 w-5" />,
-  "Quality & Cost": <Gem className="h-5 w-5" />,
-  "IP Protection": <Shield className="h-5 w-5" />,
+  "Predictable Innovation": <BrainCircuit className="h-5 w-5" />,
+  "Accelerated Time-to-Market": <Rocket className="h-5 w-5" />,
+  "Intelligent Quality": <Bot className="h-5 w-5" />,
+  "Data Security & IP": <ShieldCheck className="h-5 w-5" />,
 }
 
 export function WhyUs() {
