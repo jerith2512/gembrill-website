@@ -22,7 +22,7 @@ export function LifecycleDiagram({ data }: { data: Lifecycle }) {
                 <h3 className="text-2xl font-bold text-foreground mb-32 text-center max-w-4xl mx-auto">{data.title}</h3>
                 <div className="relative max-w-sm mx-auto aspect-square hidden md:block">
                     {/* Center Point */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-primary/20 rounded-full z-20" />
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-gray-400 rounded-full z-20" />
 
                     {data.steps.map((step, index) => {
                         const Icon = iconMap[step.iconName] || FileText
@@ -36,7 +36,7 @@ export function LifecycleDiagram({ data }: { data: Lifecycle }) {
                                 style={{ transform: `rotate(${rotation - 90}deg)` }}
                             >
                                 {/* Spoke / Slice Visual - subtle line */}
-                                <div className="absolute top-0 left-0 h-full bg-border/40" style={{ width: "110px" }} />
+                                <div className="absolute top-0 left-0 h-full bg-gray-300" style={{ width: "110px" }} />
 
                                 <div
                                     className="absolute right-[50%] top-1/2 -translate-y-1/2 flex items-center gap-4"
@@ -57,7 +57,7 @@ export function LifecycleDiagram({ data }: { data: Lifecycle }) {
                         )
                     })}
                     {/* Connecting Ring - subtle background */}
-                    <div className="absolute inset-[25%] rounded-full border-[1px] border-dashed border-primary/20 -z-10" />
+                    <div className="absolute inset-[25%] rounded-full border-[1px] border-dashed border-gray-300 -z-10" />
                 </div>
 
                 {/* Mobile View - Stacked */}

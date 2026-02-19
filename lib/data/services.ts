@@ -278,7 +278,7 @@ export const subServices: SubService[] = [
             modality: "process",
             steps: [
                 {
-                    title: "Understand the performance capabilities/needs of the software",
+                    title: "Understand Performance Needs",
                     items: [],
                     iconName: "FileText",
                     color: "bg-[#e17039] text-white border-[#e17039]",
@@ -358,19 +358,19 @@ export const subServices: SubService[] = [
                     title: "Drupal Design",
                     items: [],
                     iconName: "Code2",
-                    color: "bg-blue-500 text-white border-blue-500",
+                    color: "bg-blue-600 text-white border-blue-600",
                 },
                 {
                     title: "Drupal Development",
                     items: [],
                     iconName: "Code2",
-                    color: "bg-blue-400 text-white border-blue-400",
+                    color: "bg-blue-600 text-white border-blue-600",
                 },
                 {
                     title: "Drupal Support",
                     items: [],
                     iconName: "Wrench",
-                    color: "bg-blue-500 text-white border-blue-500",
+                    color: "bg-blue-600 text-white border-blue-600",
                 },
                 {
                     title: "Drupal Maintenance and Performance",

@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold tracking-wide text-foreground uppercase">Navigation</h3>
+            <h3 className="text-sm font-semibold tracking-wide text-foreground uppercase">Quick Links</h3>
             <ul className="mt-6 space-y-4">
               {nav.map((item) => (
                 <li key={item.href}>

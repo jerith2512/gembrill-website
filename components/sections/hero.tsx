@@ -21,7 +21,7 @@ export function Hero() {
           Engineering the Future of AI
         </span>
 
-        <h1 className="text-balance bg-gradient-to-r from-black to-white bg-clip-text px-2 text-5xl font-bold tracking-tighter text-transparent sm:text-6xl lg:text-8xl">
+        <h1 className="text-balance bg-gradient-to-r from-black to-white bg-clip-text px-2 pb-4 text-5xl font-bold tracking-tighter text-transparent sm:text-6xl lg:text-8xl">
           Digital <br className="hidden sm:block" />
           <span>Intelligence.</span>
         </h1>
