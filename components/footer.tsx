@@ -56,10 +56,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h3 className="text-sm font-semibold tracking-wide text-foreground uppercase">Contact</h3>
             <ul className="mt-6 space-y-4">
-              <li className="text-base text-black">
-                <span className="mb-2 block font-medium text-foreground">Gembrill Technologies India Private Limited.</span>
-                01, First Floor, OMS Court, Nathamuni Street, GN Chetty Road, T.Nagar, Chennai - 600 017, Tamil Nadu, India
-              </li>
+
               <li className="text-base text-black">
                 <a href="tel:+919600010212" className="hover:text-primary transition-colors">+91 96000 10212</a>
               </li>

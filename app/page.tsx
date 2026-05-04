@@ -4,7 +4,6 @@ import { BentoGrid } from "@/components/sections/bento-grid"
 import { Process } from "@/components/sections/process"
 import { WhyUs } from "@/components/sections/why-us"
 
-import { Testimonials } from "@/components/sections/testimonials"
 import { FinalCTA } from "@/components/sections/final-cta"
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <Process />
       <WhyUs />
 
-      <Testimonials />
       <FinalCTA />
     </>
   )

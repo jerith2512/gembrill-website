@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { Container, Card } from "@/components/ui-components"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone } from "lucide-react"
 
 export default function ContactPage() {
   return (
@@ -20,7 +20,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-8 sm:grid-cols-2">
             <Card>
               <div className="flex flex-col items-center gap-4 p-8 text-center">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
@@ -48,22 +48,6 @@ export default function ContactPage() {
               </div>
             </Card>
 
-            <Card className="sm:col-span-2 lg:col-span-1">
-              <div className="flex flex-col items-center gap-4 p-8 text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <MapPin className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">Office</h3>
-                  <p className="mt-1 text-base text-muted-foreground leading-relaxed">
-                    01, First Floor, OMS Court,<br />
-                    Nathamuni Street, GN Chetty Road,<br />
-                    T.Nagar, Chennai - 600 017,<br />
-                    Tamil Nadu, India
-                  </p>
-                </div>
-              </div>
-            </Card>
           </div>
         </Container>
       </section>
